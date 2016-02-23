@@ -1,0 +1,3 @@
+# MovieDemo
+使用MPMoviePlayerViewController支持在线播放，下拨，断点续传，离线播放等功能，封装了工具。
+通过网络请求视频数据，使用MPMoviePlayerViewController支持在线播放，在线缓存，下载，断点续传，使用sqlite存储下载的资源。封装了NSOperation工具,自定义了NSOperation初始化方法，重写了子线程的Main函数
