@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="METableViewCell" rowHeight="129" id="KGk-i7-Jjw" customClass="METableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="398" height="129"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="398" height="128"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AP0-dP-30T">
+                        <rect key="frame" x="10" y="15" width="100" height="98"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="MYk-FM-QG2"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yx-iq-hik">
+                        <rect key="frame" x="337" y="41" width="46" height="46"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="46" id="8fq-1i-XhW"/>
+                            <constraint firstAttribute="height" constant="46" id="tqB-qr-sCn"/>
+                        </constraints>
+                        <state key="normal" image="暂停.png"/>
+                        <connections>
+                            <action selector="MoviePlayButtonDidClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MoK-9h-QND"/>
+                        </connections>
+                    </button>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1XN-am-TMu">
+                        <rect key="frame" x="130" y="63" width="180" height="2"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="180" id="q9T-uQ-D8K"/>
+                        </constraints>
+                        <color key="progressTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="trackTintColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </progressView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="等待..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSd-9u-8Ed">
+                        <rect key="frame" x="190" y="25" width="50" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="gBg-ZJ-0ce"/>
+                            <constraint firstAttribute="height" constant="21" id="sjW-UL-twK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6yx-iq-hik" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1xh-e8-B6z"/>
+                    <constraint firstItem="1XN-am-TMu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7Ru-LW-E1g"/>
+                    <constraint firstItem="BSd-9u-8Ed" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="P0q-bK-fXV"/>
+                    <constraint firstAttribute="bottom" secondItem="AP0-dP-30T" secondAttribute="bottom" constant="15" id="cfS-Sz-7aR"/>
+                    <constraint firstItem="AP0-dP-30T" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="foF-i6-Tce"/>
+                    <constraint firstItem="1XN-am-TMu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="130" id="gFv-gv-VGe"/>
+                    <constraint firstItem="BSd-9u-8Ed" firstAttribute="leading" secondItem="AP0-dP-30T" secondAttribute="trailing" constant="80" id="hWq-F2-C6m"/>
+                    <constraint firstAttribute="trailing" secondItem="6yx-iq-hik" secondAttribute="trailing" constant="15" id="jcU-Mq-2wt"/>
+                    <constraint firstItem="AP0-dP-30T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="vqh-Xn-cDp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="movieImageView" destination="AP0-dP-30T" id="mg6-yg-8AE"/>
+                <outlet property="moviePlayButton" destination="6yx-iq-hik" id="69d-fV-n1I"/>
+                <outlet property="moviePlaygressView" destination="1XN-am-TMu" id="XMc-gm-GUJ"/>
+                <outlet property="movieProgressLabel" destination="BSd-9u-8Ed" id="HrT-Kn-8aB"/>
+            </connections>
+            <point key="canvasLocation" x="482" y="455.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="暂停.png" width="48" height="48"/>
+    </resources>
+</document>
